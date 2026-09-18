@@ -1,12 +1,12 @@
 {
   "name": "@floci/frontend",
-  "description": "Floci UI web console — the React + Vite frontend for exploring local multi-cloud runtimes.",
+  "description": "Floci UI web console \u2014 the React + Vite frontend for exploring local multi-cloud runtimes.",
   "private": true,
   "version": "0.5.0",
   "type": "module",
   "scripts": {
     "test:e2e": "playwright test",
-    "dev": "vite",
+    "dev": "node api.js && vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src tests --report-unused-disable-directives --max-warnings 0",

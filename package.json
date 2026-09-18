@@ -1,20 +1,20 @@
 {
   "name": "floci-ui",
   "version": "0.5.0",
-  "description": "Any Cloud. Locally. — the local cloud console for Floci, an AWS-Console-style UI for your multi-cloud runtime.",
+  "description": "Any Cloud. Locally. \u2014 the local cloud console for Floci, an AWS-Console-style UI for your multi-cloud runtime.",
   "private": true,
   "packageManager": "pnpm@9.2.0",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "dev": "sh -c 'PORT=4501 pnpm dev:api & pnpm dev:web'",
-    "dev:web": "pnpm --filter @floci/frontend dev",
+    "dev": "node api.js && sh -c 'PORT=4501 pnpm dev:api & pnpm dev:web'",
+    "dev:web": "node api.js && pnpm --filter @floci/frontend dev",
     "build": "pnpm --filter @floci/frontend build",
     "lint": "pnpm --filter @floci/frontend lint",
     "type-check": "pnpm --filter @floci/api type-check && pnpm --filter @floci/frontend type-check",
     "test": "pnpm --filter @floci/api test",
-    "dev:api": "sh -c 'PORT=${PORT:-4501} pnpm --filter @floci/api dev'",
-    "start:api": "sh -c 'PORT=${PORT:-4501} pnpm --filter @floci/api start'"
+    "dev:api": "node api.js && sh -c 'PORT=${PORT:-4501} pnpm --filter @floci/api dev'",
+    "start:api": "node api.js && sh -c 'PORT=${PORT:-4501} pnpm --filter @floci/api start'"
   }
 }

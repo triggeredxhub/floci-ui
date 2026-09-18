@@ -29,8 +29,6 @@ test-results/
 .nyc_output/
 
 # Environment files
-.env
-.env.*
 !.env.example
 
 # Logs
@@ -47,7 +45,6 @@ lerna-debug.log*
 
 # Local editor and IDE state
 .idea/
-.vscode/
 *.swp
 *.swo
 
@@ -73,3 +70,4 @@ data
 local
 playwright-report/
 test-results/
+config.bat
