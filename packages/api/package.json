@@ -1,11 +1,11 @@
 {
   "name": "@floci/api",
-  "description": "Floci UI backend — translates the console's REST/JSON requests into cloud SDK calls against Floci runtimes.",
+  "description": "Floci UI backend \u2014 translates the console's REST/JSON requests into cloud SDK calls against Floci runtimes.",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
+    "dev": "node api.js && bun run --watch src/index.ts",
+    "start": "node api.js && bun run src/index.ts",
     "type-check": "tsc --noEmit",
     "test": "bun test"
   },
